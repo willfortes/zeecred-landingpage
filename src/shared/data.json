@@ -1,0 +1,83 @@
+{
+    "header": {
+        "title": "Transforme agora o<br/><span class='text-secondary'>limite do seu cartão</span> de<br/>crédito em <span class='text-secondary'>dinheiro</span>",
+        "subtitle": "Faça uma simulação e tenha seu Pix em poucos minutos.",
+        "button": "Faça uma simulação",
+        "buttonHref": "#simulation"
+    },
+    "step": {
+        "title": "Siga o passo a passo para pedir o seu",
+        "subtitle": "Faça uma simulação e tenha seu Pix em poucos minutos",
+        "steps": [
+            {
+                "image": "first.svg",
+                "title": "Faça uma simulação",
+                "description": "Você pode utilizar todo o limite disponível no seu cartão para a troca, e ainda parcela em até 12x fixas*"
+            },
+            {
+                "image": "second.svg",
+                "title": "Solicite o valor",
+                "description": "Solicite o valor e nosso time de compliance irá validar a aprovação."
+            },
+            {
+                "image": "third.svg",
+                "title": "Pix na conta",
+                "description": "O Pix será efetuado na sua conta em até 10 minutos após a aprovação."
+            }
+        ]
+    },
+    "about": {
+        "title": "Porque é tão <span class='text-primary'>fácil e seguro</span> sacar o<br/>seu dinheiro com a Zeecred?",
+        "steps": [
+            {
+                "image": "icons/invoice.svg",
+                "title": "Parcele em até 12x",
+                "description": "Saque o <b>limite</b> do seu cartão de crédito, tenha dinheiro em mãos na hora e parcele em até 12x."
+            },
+            {
+                "image": "icons/screen.svg",
+                "title": "100% online",
+                "description": "Você consegue fazer tudo sem sair de casa, efetue o cadastro na plataforma e faça a solicitação do valor."
+            },
+            {
+                "image": "icons/shield.svg",
+                "title": "Dados seguros",
+                "description": "Somos rigorosos nessa questão, segurança é nossa prioridade, seus dados estão <b>blindados</b> com a gente!"
+            },
+            {
+                "image": "icons/chart.svg",
+                "title": "Taxas",
+                "description": "Praticamos as melhores taxas do mercado, você vai se surpreender."
+            }
+        ]
+    },
+    "simulation": {
+        "title": "Simulador de Pix com <span class='text-secondary'>cartão de crédito</span>",
+        "subtitle": "Aproveite os descontos oferecidos pelas lojas pra pagamentos<br/>à vista no Pix, mesmo sem ter saldo em conta!<br/><br/>Simule sua compra e descubra quanto você pode economizar<br/>usando o Pix com cartão de crédito."
+    },
+    "faq": {
+        "title": "Perguntas frequentes",
+        "subtitle": "Confira as perguntas mais frequentes de nossos usuários",
+        "questions": [
+            {
+                "question": "Como usar o Pix no crédito?",
+                "answer": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+            },
+            {
+                "question": "Posso mandar um Pix com cartão para minha conta?",
+                "answer": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+            },
+            {
+                "question": "Quais cartões são aceitos para fazer um Pix no crédito?",
+                "answer": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+            },
+            {
+                "question": "Quando vale a pena fazer um Pix com cartão de crédito?",
+                "answer": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+            }
+        ]
+    },
+    "footer": {
+        "description": "A ZeeCred Instituição de Crédito Ltda é uma Instituição de Pagamento conforme normas do Banco Central, emissora de moeda eletrônica que gerencia conta de pagamento do tipo pré-paga.<br/><br/>ZeeCred Instituição de Crédito Ltda. CNPJ: 17.305.560/0001-65. Endereço: Avenida Brigadeiro Faria Lima, nº 2000, 1º andar, sala 115, Espaço WeWork -  Itaim Bibi, São Paulo/SP, CEP 04538-133"
+    }
+}
