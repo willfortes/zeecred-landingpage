@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        epilogue: ["Epilogue", "sans-serif"],
+      },
       colors:{
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',

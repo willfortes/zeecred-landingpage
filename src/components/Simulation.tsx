@@ -7,7 +7,7 @@ const Simulation = () => {
             <div className="container m-auto p-10">
                 <div className="grid md:grid-cols-2 sm:grid-cols-1 bg-primary rounded-lg text-white md:h-[350px] sm:h-fit">
                     <div className="p-10">
-                        <h1 className="md:text-3xl text-2xl text-center md:text-left font-bold mb-5" dangerouslySetInnerHTML={{__html: Content.simulation.title}} />
+                        <h1 className="md:text-3xl text-2xl text-center md:text-left font-bold mb-5 font-sans" dangerouslySetInnerHTML={{__html: Content.simulation.title}} />
                         <p className="text-sm font-light leading-5" dangerouslySetInnerHTML={{__html: Content.simulation.subtitle}} />
 
                         <div className="mt-10">

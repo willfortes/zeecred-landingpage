@@ -4,7 +4,7 @@ const About = () => {
     return (
         <section id="about" className="bg-secondary p-20">
             <div className="container m-auto">
-                <h1 className="text-3xl font-bold mb-20 text-center md:text-left leading-8" dangerouslySetInnerHTML={{__html: Content.about.title}} />
+                <h1 className="text-3xl font-bold mb-20 text-center md:text-left leading-8 font-sans" dangerouslySetInnerHTML={{__html: Content.about.title}} />
                 
                 <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-10 mt-32">
                     {Content.about.steps.map(step => (

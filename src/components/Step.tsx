@@ -5,7 +5,7 @@ const Step = () => {
         <section className="py-20 ">
             <div className="container m-auto">
                 <div className="text-center mb-14">
-                    <h1 className="text-3xl font-bold mb-5">{Content.step.title}</h1>
+                    <h1 className="text-3xl font-bold mb-5 font-sans">{Content.step.title}</h1>
                     <p className="text-sm font-light">{Content.step.subtitle}</p>
                 </div>
 
