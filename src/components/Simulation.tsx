@@ -13,7 +13,7 @@ const Simulation = () => {
                         <div className="mt-10">
                             <form className="block md:flex items-center max-w-lg">   
                                 <div className="relative md:w-80 sm:w-full mb-5 md:mb-0">
-                                    <input type="text" id="simulation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="" required />
+                                    <input type="text" id="simulation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Digite o valor" required />
                                 </div>
                                 <button type="submit" className="w-full md:w-fit py-2.5 px-10 md:ms-2 text-sm font-medium text-black bg-secondary rounded-lg border focus:ring-4 focus:outline-none">
                                     Simule agora
@@ -22,7 +22,7 @@ const Simulation = () => {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <Image src="simulation.svg" className="m-auto relative md:bottom-[85px] sm:bottom-0" alt="Simulação" width={300} height={300} />
+                        <Image src="/simulation.svg" className="m-auto relative md:bottom-[85px] sm:bottom-0" alt="Simulação" width={300} height={300} />
                     </div>
                 </div>
             </div>

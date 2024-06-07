@@ -1,6 +1,8 @@
 import Content from "@/shared/data.json";
 import Image from "next/image";
 
+import HeaderImage from "@/assets/header.svg";
+
 const Header = () => {
     return (
         <header className="bg-primary text-white">
@@ -15,7 +17,7 @@ const Header = () => {
                             href={Content.header.buttonHref}>{Content.header.button}</a>
                     </div>
                     <div className="flex justify-center">
-                        <Image src="header.svg" alt="ZeeCred" width={500} height={500} />
+                        <Image src={HeaderImage} alt="ZeeCred" width={500} height={500} />
                     </div>
                 </div>
             </div>

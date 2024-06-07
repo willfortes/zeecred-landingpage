@@ -6,7 +6,7 @@ const Menu = () => {
             <div className="container m-auto py-5 px-5 md:px-0">
                 <div className="grid grid-cols-2">
                     <div className="flex items-center">
-                        <Image src="logo.svg" alt="ZeeCred Logo" width={200} height={200}/>
+                        <Image src="/logo.svg" alt="ZeeCred Logo" width={200} height={200}/>
                     </div>
                     <div className="justify-end hidden md:flex">
                         <ul className="flex gap-5 items-center">
