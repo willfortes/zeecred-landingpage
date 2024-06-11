@@ -1,6 +1,16 @@
 import Content from "@/shared/data.json";
 import Image from "next/image";
 
+import First from "@/assets/first.png";
+import Second from "@/assets/second.png";
+import Third from "@/assets/third.png";
+
+const Steps = {
+    "first": First,
+    "second": Second,
+    "third": Third
+}
+
 const Step = () => {
     return (
         <section className="py-20 ">
@@ -13,7 +23,7 @@ const Step = () => {
                 <div className="grid md:grid-cols-3 sm:grid-cols-1">
                     {Content.step.steps.map(step => (
                         <div key={step.title} className="md:flex sm:block m-auto md:m-0 items-center mb-16">
-                            <Image src={step.image} width={150} height={150} alt="Icon" className="m-auto md:m-0"/>
+                            <Image src={Steps[step.image as keyof typeof Steps]} width={150} height={150} alt="Icon" className="m-auto md:m-0"/>
                             <div className="ml-5 mt-10">
                                 <h3 className="text-xl font-semibold text-center md:text-left">{step.title}</h3>
                                 <p className="text-sm font-light w-48 text-center md:text-left leading-5 mt-5">{step.description}</p>

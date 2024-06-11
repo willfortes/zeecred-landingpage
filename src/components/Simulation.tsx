@@ -22,7 +22,7 @@ const Simulation = () => {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <Image src="/simulation.svg" className="m-auto relative md:bottom-[85px] sm:bottom-0" alt="Simulação" width={300} height={300} />
+                        <Image src="simulation.svg" className="m-auto relative md:bottom-[85px] sm:bottom-0" alt="Simulação" width={300} height={300} />
                     </div>
                 </div>
             </div>

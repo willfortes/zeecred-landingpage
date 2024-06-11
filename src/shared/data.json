@@ -1,6 +1,6 @@
 {
     "header": {
-        "title": "Transforme agora o<br/><span class='text-secondary'>limite do seu cartão</span> de<br/>crédito em <span class='text-secondary'>dinheiro</span>",
+        "title": "Transforme agora o<br/><span class='text-secondary'>limite do seu cartão</span> de crédito em <span class='text-secondary'>dinheiro</span>",
         "subtitle": "Faça uma simulação e tenha seu Pix em poucos minutos.",
         "button": "Faça uma simulação",
         "buttonHref": "#simulation"
@@ -10,17 +10,17 @@
         "subtitle": "Faça uma simulação e tenha seu Pix em poucos minutos",
         "steps": [
             {
-                "image": "first.svg",
+                "image": "first",
                 "title": "Faça uma simulação",
                 "description": "Você pode utilizar todo o limite disponível no seu cartão para a troca, e ainda parcela em até 12x fixas*"
             },
             {
-                "image": "second.svg",
+                "image": "second",
                 "title": "Solicite o valor",
                 "description": "Solicite o valor e nosso time de compliance irá validar a aprovação."
             },
             {
-                "image": "third.svg",
+                "image": "third",
                 "title": "Pix na conta",
                 "description": "O Pix será efetuado na sua conta em até 10 minutos após a aprovação."
             }
