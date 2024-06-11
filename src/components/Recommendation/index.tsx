@@ -25,7 +25,7 @@ const Recommendation = ({name}: RecommendationProps) => {
       }, []);
 
     return (
-        <div className={`fixed ${scrolled ? "top-[20px]" : "top-[105px]"} md:left-20 left-3 md:w-fit w-[95%] bg-white p-3 px-5 rounded-xl border-[1px] border-secondary z-40`}>
+        <div className={`fixed ${scrolled ? "top-[20px]" : "top-[105px]"} md:left-52 lg:left-[9%] left-3 md:w-fit w-[95%] bg-white p-3 px-5 rounded-xl border-[1px] border-secondary z-40`}>
             <p className="text-[10px] font-light text-[#161718] mb-2">Você foi indicado por</p>
             <p className="text-xs font-bold text-primary">{name}</p>
         </div>
