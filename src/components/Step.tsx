@@ -20,9 +20,9 @@ const Step = () => {
                     <p className="text-sm font-light">{Content.step.subtitle}</p>
                 </div>
 
-                <div className="grid md:grid-cols-3 sm:grid-cols-1">
+                <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-2">
                     {Content.step.steps.map(step => (
-                        <div key={step.title} className="md:flex sm:block m-auto md:m-0 items-center mb-16">
+                        <div key={step.title} className="md:flex sm:block m-auto md:m-0 justify-center items-center mb-16">
                             <Image src={Steps[step.image as keyof typeof Steps]} width={150} height={150} alt="Icon" className="m-auto md:m-0"/>
                             <div className="ml-5 mt-10">
                                 <h3 className="text-xl font-semibold text-center md:text-left">{step.title}</h3>

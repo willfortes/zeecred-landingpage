@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useState } from "react";
+import Recommendation from "./Recommendation";
 
 const Menu = () => {
     const [openMenuMobile, setOpenMenuMobile] = useState(false);
@@ -10,8 +11,10 @@ const Menu = () => {
             <nav className="w-full">
                 <div className="container m-auto py-5 px-5 md:px-0">
                     <div className="grid grid-cols-2">
-                        <div className="flex items-center">
+                        <div className="flex items-center relative">
                             <Image src="logo.svg" alt="ZeeCred Logo" width={182.92} height={34}/>
+                            
+                            <Recommendation name={"Marcos Vinicius Teixeira Fernandes"} />
                         </div>
                         <div className="flex justify-end content-center items-center">
                             <ul className="gap-5 items-center hidden md:flex">
