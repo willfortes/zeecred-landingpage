@@ -32,7 +32,7 @@ const About = () => {
                             whileInView="onscreen"
                             key={step.title} 
                             variants={cardVariants} 
-                            className="p-10 bg-white rounded-lg relative mb-10 md:mb-0">
+                            className="py-10 px-3 bg-white rounded-lg relative mb-10 md:mb-0">
                             <div className="p-1 rounded-full bg-white w-fit absolute -top-10 left-1/2 -translate-x-1/2">
                                 <div className="p-5 bg-primary w-fit rounded-full">
                                     <Image src={step.image} width={40} height={40} alt="steps" />

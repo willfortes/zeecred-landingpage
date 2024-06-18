@@ -13,7 +13,7 @@ const Header = () => {
                         <p className="text-sm text-center md:text-left w-60 m-auto md:m-0 md:w-fit font-extralight">{Content.header.subtitle}</p>
                         <br/>
                         <a 
-                            className="w-4/5 md:w-fit m-auto md:m-0 border-2 text-secondary border-secondary px-14 py-2 rounded-md block text-center md:text-left mb-20"
+                            className="w-4/5 md:w-fit m-auto md:m-0 border-2 text-secondary border-secondary px-14 py-2 rounded-md block text-center md:text-left mb-20 hover:bg-buttons hover:text-black"
                             href={Content.header.buttonHref}>{Content.header.button}</a>
                     </div>
                     <div className="flex justify-center">

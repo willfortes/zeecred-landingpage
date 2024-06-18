@@ -36,7 +36,7 @@ const Simulation = () => {
                                 <div className="relative md:w-80 sm:w-full mb-5 md:mb-0">
                                     <input type="text" id="simulation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Digite o valor" required />
                                 </div>
-                                <button type="submit" className="w-full md:w-fit py-2.5 px-5 md:ms-2 text-sm font-medium text-black bg-secondary rounded-lg border focus:ring-4 focus:outline-none">
+                                <button type="submit" className="w-full md:w-fit py-2.5 px-5 md:ms-2 text-sm font-medium text-black bg-secondary rounded-lg border focus:ring-4 focus:outline-none hover:bg-[#96CD00]">
                                     Simule agora
                                 </button>
                             </form>

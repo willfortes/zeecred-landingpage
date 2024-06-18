@@ -21,7 +21,7 @@ const Menu = () => {
                                 <li><a href="#about" className="text-primary">Como funciona?</a></li>
                                 <li><a href="#faq" className="text-primary">Perguntas frequentes</a></li>
                                 <li className="ml-10">
-                                    <a href="#simulation" className="block text-black px-10 font-semibold py-2 bg-buttons rounded">
+                                    <a href="#simulation" className="block text-black px-10 font-semibold py-2 bg-buttons rounded hover:bg-[#96CD00]">
                                         Simule aqui
                                     </a>
                                 </li>
@@ -55,7 +55,7 @@ const Menu = () => {
                         <li><a href="#about" className="block w-full p-5 py-4 text-primary">Como funciona?</a></li>
                         <li><a href="#faq" className="block w-full p-5 py-4 text-primary mb-5">Perguntas frequentes</a></li>
                         <li>
-                            <a href="#simulation" className="w-full block text-black px-10 font-semibold py-4 bg-buttons rounded">
+                            <a href="#simulation" className="w-full block text-black px-10 font-semibold py-4 bg-buttons rounded hover:bg-[#96CD00]">
                                 Simule aqui
                             </a>
                         </li>
