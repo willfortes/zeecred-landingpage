@@ -21,7 +21,7 @@ const cardVariants: Variants = {
 const Simulation = () => {
     return (
         <div id="simulation" className="py-20" >
-            <div className="container m-auto px-20">
+            <div className="container m-auto md:px-20 px-10">
                 <motion.div 
                     initial="offscreen"
                     whileInView="onscreen"
