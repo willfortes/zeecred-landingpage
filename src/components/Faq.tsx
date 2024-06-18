@@ -5,7 +5,7 @@ const Faq = () => {
     
     return (
         <div id="faq" className="bg-tertiary py-20">
-            <div className="container m-auto ">
+            <div className="container m-auto">
                 <div className="text-center my-5 mb-16 mx-10 md:mx-0">
                     <h1 className="text-3xl font-bold mb-3 font-sans">{Content.faq.title}</h1>
                     <p className="text-sm font-light">{Content.faq.subtitle}</p>
