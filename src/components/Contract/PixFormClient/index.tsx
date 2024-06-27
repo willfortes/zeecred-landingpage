@@ -4,6 +4,8 @@ import Input from "@/components/Shared/Input"
 import { SubmitHandler, useForm } from "react-hook-form"
 import Content from "@/shared/data.json";
 import SelectInput from "@/components/Shared/Select";
+import mask from "@/utils/mask";
+import { useEffect, useState } from "react";
 
 type FormClientProps = {
     pixType: string
@@ -11,6 +13,7 @@ type FormClientProps = {
 }
 
 const PixFormClient = () => {
+    const [pixType, setPixType] = useState("")
 
     const {
         register,
@@ -29,12 +32,54 @@ const PixFormClient = () => {
                 <SelectInput
                     label="Tipo de chave pix"
                     {...register("pixType")}
+                    onChange={(e) => {
+                        setPixType(e.target.value)
+                    }}
                     options={Content.form.pixTypes}
                     placeholder="Selecione aqui"
                     inputClassName="col-span-1 mb-10" />
                 <Input 
                     label="Chave*" 
-                    {...register("pixKey")}
+                    {...register("pixKey", {
+                        onChange: (e) => {
+                            switch (watch("pixType")) {
+                                case "cpf":
+                                    e.target.value = mask.cpfMask(e.target.value)
+                                    break;
+                                case "cnpj":
+                                    e.target.value = mask.cnpjMask(e.target.value)
+                                    break;
+                                case "phone":
+                                    e.target.value = mask.phoneMask(e.target.value)
+                                    break;
+                                case "email":
+                                    e.target.value = e.target.value
+                                    break;
+                                default:
+                                    e.target.value = e.target.value
+                                    break;
+                            }
+                        }
+                    })}
+                    onChange={(e) => {
+                        switch (pixType) {
+                            case "cpf":
+                                e.target.value = mask.cpfMask(e.target.value)
+                                break;
+                            case "cnpj":
+                                e.target.value = mask.cnpjMask(e.target.value)
+                                break;
+                            case "phone":
+                                e.target.value = mask.phoneMask(e.target.value)
+                                break;
+                            case "email":
+                                e.target.value = e.target.value
+                                break;
+                            default:
+                                e.target.value = e.target.value
+                                break;
+                        }
+                    }}
                     placeholder="Digite aqui"
                     inputClassName="md:col-span-2" />
             </div>

@@ -5,6 +5,9 @@ import SelectInput from "@/components/Shared/Select"
 import { SubmitHandler, useForm } from "react-hook-form"
 import Content from "@/shared/data.json";
 
+import mask from "@/utils/mask"
+import { useEffect } from "react";
+
 type FormClientProps = {
     document: string
     name: string
@@ -23,7 +26,6 @@ type FormClientProps = {
 }
 
 const ContractFormClient = () => {
-
     const {
         register,
         handleSubmit,
@@ -35,12 +37,20 @@ const ContractFormClient = () => {
 
     }
 
+    useEffect(() => {
+        console.log(watch("document"))
+    }, [watch("document")])
+
     return (
-        <div>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4 mb-10">
                 <Input 
                     label="CPF" 
-                    {...register("document")} 
+                    {...register("document", {
+                        onChange: (e) => {
+                            e.target.value = mask.cpfMask(e.target.value)
+                        }
+                    })} 
                     placeholder="XXX.XXX.XXX-XX"
                     inputClassName="col-span-1" />
                 <Input 
@@ -58,12 +68,20 @@ const ContractFormClient = () => {
             <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4 mb-10">
                 <Input 
                     label="Telefone" 
-                    {...register("phone")}
+                    {...register("phone", {
+                        onChange: (e) => {
+                            e.target.value = mask.phoneMask(e.target.value)
+                        }
+                    })}
                     placeholder="XX XXXXX-XXXX"
                     inputClassName="col-span-1" />
                 <Input 
                     label="Celular" 
-                    {...register("mobilePhone")}
+                    {...register("mobilePhone", {
+                        onChange: (e) => {
+                            e.target.value = mask.cellphoneMask(e.target.value)
+                        }
+                    })}
                     placeholder="XX XXXXX-XXXX"
                     inputClassName="col-span-1" />
                 <Input 
@@ -75,7 +93,11 @@ const ContractFormClient = () => {
             <div className="grid md:grid-cols-5 sm:grid-cols-1 gap-4 mb-10">
                 <Input 
                     label="CEP" 
-                    {...register("cep")}
+                    {...register("cep", {
+                        onChange: (e) => {
+                            e.target.value = mask.zipCodeMask(e.target.value)
+                        }
+                    })}
                     placeholder="XXXXX-XXX"
                     inputClassName="col-span-1" />
                 <Input 
@@ -112,7 +134,7 @@ const ContractFormClient = () => {
                     placeholder="Selecione aqui"
                     inputClassName="col-span-1" />
             </div>
-        </div>
+        </form>
     );
 };
 
