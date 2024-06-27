@@ -10,9 +10,7 @@ const Steps = ({
     currentStep
 }: StepsProps) => {
 
-    let width = Math.round((currentStep / steps) * 100)
-
-    console.log("width", width);
+    let width = Math.round((currentStep >= 3 ? 1 : currentStep / steps) * 100)
 
     return (
         <div className="flex justify-between relative">
