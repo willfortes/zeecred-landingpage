@@ -1,7 +1,9 @@
 "use client"
 
-import Input from "@/components/Input"
+import Input from "@/components/Shared/Input"
+import SelectInput from "@/components/Shared/Select"
 import { SubmitHandler, useForm } from "react-hook-form"
+import Content from "@/shared/data.json";
 
 type FormClientProps = {
     document: string
@@ -103,10 +105,11 @@ const ContractFormClient = () => {
                     {...register("city")}
                     placeholder="Digite aqui"
                     inputClassName="md:col-span-2" />
-                <Input 
-                    label="Estado" 
+                <SelectInput
+                    label="Estado"
                     {...register("state")}
-                    placeholder="Digite aqui"
+                    options={Content.form.states}
+                    placeholder="Selecione aqui"
                     inputClassName="col-span-1" />
             </div>
         </div>

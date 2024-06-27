@@ -79,5 +79,44 @@
     },
     "footer": {
         "description": "A ZeeCred Instituição de Crédito Ltda é uma Instituição de Pagamento conforme normas do Banco Central, emissora de moeda eletrônica que gerencia conta de pagamento do tipo pré-paga.<br/><br/>ZeeCred Instituição de Crédito Ltda. CNPJ: 17.305.560/0001-65. Endereço: Avenida Brigadeiro Faria Lima, nº 2000, 1º andar, sala 115, Espaço WeWork -  Itaim Bibi, São Paulo/SP, CEP 04538-133"
+    },
+    "form": {
+        "states": [
+            { "label": "Selecione", "value": "" },
+            { "label": "Acre", "value": "AC" },
+            { "label": "Alagoas", "value": "AL" },
+            { "label": "Amapá", "value": "AP" },
+            { "label": "Amazonas", "value": "AM" },
+            { "label": "Bahia", "value": "BA" },
+            { "label": "Ceará", "value": "CE" },
+            { "label": "Distrito Federal", "value": "DF" },
+            { "label": "Espírito Santo", "value": "ES" },
+            { "label": "Goiás", "value": "GO" },
+            { "label": "Maranhão", "value": "MA" },
+            { "label": "Mato Grosso", "value": "MT" },
+            { "label": "Mato Grosso do Sul", "value": "MS" },
+            { "label": "Minas Gerais", "value": "MG" },
+            { "label": "Pará", "value": "PA" },
+            { "label": "Paraíba", "value": "PB" },
+            { "label": "Paraná", "value": "PR" },
+            { "label": "Pernambuco", "value": "PE" },
+            { "label": "Piauí", "value": "PI" },
+            { "label": "Rio de Janeiro", "value": "RJ" },
+            { "label": "Rio Grande do Norte", "value": "RN" },
+            { "label": "Rio Grande do Sul", "value": "RS" },
+            { "label": "Rondônia", "value": "RO" },
+            { "label": "Roraima", "value": "RR" },
+            { "label": "Santa Catarina", "value": "SC" },
+            { "label": "São Paulo", "value": "SP" },
+            { "label": "Sergipe", "value": "SE" },
+            { "label": "Tocantins", "value": "TO" }
+        ],
+        "pixTypes": [
+            { "label": "Selecione", "value": "" },
+            { "label": "Email", "value": "email" },
+            { "label": "CPF", "value": "cpf" },
+            { "label": "CNPJ", "value": "cnpj" },
+            { "label": "Telefone", "value": "phone" }
+        ]
     }
 }

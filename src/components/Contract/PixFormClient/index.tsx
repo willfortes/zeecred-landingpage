@@ -1,7 +1,9 @@
 "use client"
 
-import Input from "@/components/Input"
+import Input from "@/components/Shared/Input"
 import { SubmitHandler, useForm } from "react-hook-form"
+import Content from "@/shared/data.json";
+import SelectInput from "@/components/Shared/Select";
 
 type FormClientProps = {
     pixType: string
@@ -24,9 +26,10 @@ const PixFormClient = () => {
     return (
         <div>
             <div className="mb-10">
-                <Input 
-                    label="Tipo de chave*" 
-                    {...register("pixType")} 
+                <SelectInput
+                    label="Tipo de chave pix"
+                    {...register("pixType")}
+                    options={Content.form.pixTypes}
                     placeholder="Selecione aqui"
                     inputClassName="col-span-1 mb-10" />
                 <Input 

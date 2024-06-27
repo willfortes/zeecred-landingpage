@@ -1,6 +1,6 @@
 "use client"
 
-import Input from "@/components/Input"
+import Input from "@/components/Shared/Input"
 import { SubmitHandler, useForm } from "react-hook-form"
 
 type FormClientProps = {
