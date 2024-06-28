@@ -65,11 +65,38 @@ function zipCodeMask(zipCode: string): string {
     return value;
 }
 
+function cardNumberMask(cardNumber: string): string {
+  let value = cardNumber.replace(/\D/g, '');
+
+  if (value.length > 16) {
+    value = value.slice(0, 16);
+  }
+
+  value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+  return value.trim();
+}
+
+function dateCardMask(value: string): string {
+  let cleanValue = value.replace(/\D/g, '');
+
+  if (cleanValue.length > 4) {
+    cleanValue = cleanValue.slice(0, 4);
+  }
+
+  if (cleanValue.length > 2) {
+    cleanValue = cleanValue.replace(/^(\d{2})(\d)/, '$1/$2');
+  }
+
+  return cleanValue;
+}
 
 export default {
     cpfMask,
     cnpjMask,
     phoneMask,
     cellphoneMask,
-    zipCodeMask
+    zipCodeMask,
+    cardNumberMask,
+    dateCardMask
 }

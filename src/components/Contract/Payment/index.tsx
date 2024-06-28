@@ -2,6 +2,7 @@
 
 import Input from "@/components/Shared/Input"
 import { SubmitHandler, useForm } from "react-hook-form"
+import mask from "@/utils/mask"
 
 type FormClientProps = {
     pixType: string
@@ -30,6 +31,9 @@ const PaymentForm = () => {
                     <div className="mt-5">
                         <Input 
                             label="Número do cartão*" 
+                            onChange={(e) => {
+                                e.target.value = mask.cardNumberMask(e.target.value);
+                            }}
                             placeholder="Digite aqui"
                             inputClassName="mb-10" />
                         <Input 
@@ -40,11 +44,16 @@ const PaymentForm = () => {
                         <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
                             <Input 
                                 label="Data de validade*" 
-                                placeholder="mm/dd"
+                                placeholder="mm/aa"
+                                onChange={(e) => {
+                                    e.target.value = mask.dateCardMask(e.target.value);
+                                }}
                                 inputClassName="mb-10" />
                             <Input 
                                 label="CVV*" 
                                 placeholder="123"
+                                maxLength={4}
+                                max={4}
                                 inputClassName="mb-10" />
                         </div>
                     </div>

@@ -4,10 +4,15 @@ import Menu from "@/components/Contract/Menu";
 import PaymentForm from "@/components/Contract/Payment";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Payment() {
 
   const router = useRouter();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [])
 
   const handlePayment = () => {
     router.push("/payment/status")
