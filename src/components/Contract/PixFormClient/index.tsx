@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import Content from "@/shared/data.json";
 import SelectInput from "@/components/Shared/Select";
 import mask from "@/utils/mask";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type FormClientProps = {
     pixType: string

@@ -8,7 +8,7 @@ import PixFormClient from "@/components/Contract/PixFormClient";
 import Steps from "@/components/Contract/Steps";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
@@ -16,7 +16,13 @@ export default function Home() {
 
   const router = useRouter();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [])
+
   const handleStep = (next: boolean) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     if (next) {
       setCurrentStep(currentStep + 1);
     } else {
@@ -26,6 +32,10 @@ export default function Home() {
 
   const handleLandingPage = () => {
     router.push("/")
+  }
+
+  const handlePayment = () => {
+    router.push("/payment")
   }
 
   return (
@@ -78,39 +88,39 @@ export default function Home() {
             {currentStep === 3 &&
               <div>
                 <div className="flex items-center mb-5">
-                    <input id="terms" type="checkbox" value="" className="w-10 h-10 text-primary bg-primary accent-primary border border-primary rounded-xl focus:ring-primary checked:bg-primary" />
-                    <label htmlFor="terms" className="ms-2 md:text-xl text-base font-medium text-gray-900 ">Li e aceito os termos do <a href="" className="text-primary">Guia Contratual</a></label>
+                    <input id="terms" type="checkbox" value="" className="text-primary bg-primary accent-primary border border-primary rounded-xl focus:ring-primary checked:bg-primary" />
+                    <label htmlFor="terms" className="ms-2 md:text-sm text-base font-medium text-gray-900 ">Li e aceito os termos do <a href="" className="text-primary">Guia Contratual</a></label>
                 </div>
                 <div className="flex items-center">
-                    <input id="politics" type="checkbox" value="" className="w-10 h-10 text-primary bg-primary accent-primary border-primary rounded-xl focus:ring-primary " />
-                    <label htmlFor="politics" className="ms-2 md:text-xl text-base font-medium text-gray-900 ">Ao marcar, eu aceito <a href="" className="text-primary">Politica de Privacidade</a></label>
+                    <input id="politics" type="checkbox" value="" className="text-primary bg-primary accent-primary border-primary rounded-xl focus:ring-primary " />
+                    <label htmlFor="politics" className="ms-2 md:text-sm text-base font-medium text-gray-900 ">Ao marcar, eu aceito <a href="" className="text-primary">Politica de Privacidade</a></label>
                 </div>
               </div>
             }
 
-            <div className={`${currentStep > 1 ? "grid md:grid-cols-2 sm:grid-cols-1" : currentStep >= 3 ? "flex justify-start" : "flex justify-end"} gap-5 mt-10 mb-40`}>
+            <div className={`${currentStep >= 1 ? "grid md:grid-cols-2 sm:grid-cols-1" : currentStep >= 3 ? "flex justify-start" : "flex justify-end"} gap-5 mt-10 mb-40`}>
               {currentStep <= 1 &&
-                <button type="button" onClick={handleLandingPage} className={`${currentStep > 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full border border-primary text-primary py-3 rounded-2xl hover:bg-primary hover:text-white`}>Voltar</button>
+                <button disabled type="button" onClick={handleLandingPage} className={`${currentStep >= 1 ? "w-full" : "md:w-1/2 sm:w-full"} disabled:border-gray-400 disabled:text-gray-400 disabled:hover:bg-gray-200 w-full border border-primary text-primary py-3 font-bold rounded-2xl hover:bg-primary hover:text-white`}>Voltar</button>
               }
 
               {currentStep > 1 && currentStep <= 3 &&
-                <button type="button" onClick={() => handleStep(false)} className={`${currentStep > 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full border border-primary text-primary py-3 rounded-2xl hover:bg-primary hover:text-white`}>Anterior</button>
+                <button type="button" onClick={() => handleStep(false)} className={`${currentStep >= 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full border border-primary text-primary py-3 font-bold rounded-2xl hover:bg-primary hover:text-white`}>Anterior</button>
               }
 
               {currentStep <= 2 &&
-                <button type="button" onClick={() => handleStep(true)} className={`${currentStep > 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full bg-primary text-white py-3 rounded-2xl hover:bg-violet-900`}>Próximo</button>
+                <button type="button" onClick={() => handleStep(true)} className={`${currentStep >= 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full bg-primary text-white py-3 rounded-2xl font-bold hover:bg-violet-900`}>Próximo</button>
               }
               
               {currentStep === 3 &&
-                <button type="button" onClick={() => handleStep(true)} className={`${currentStep > 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full bg-primary text-white py-3 rounded-2xl hover:bg-violet-900`}>Finalizar pedido</button>
+                <button type="button" onClick={() => handleStep(true)} className={`${currentStep >= 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full bg-primary text-white py-3 rounded-2xl font-bold hover:bg-violet-900`}>Finalizar pedido</button>
               }
 
               {currentStep > 3 &&
-                <button type="button" onClick={handleLandingPage} className={`${currentStep > 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full border border-primary text-primary py-3 rounded-2xl hover:bg-primary hover:text-white`}>Tive um problema</button>
+                <button type="button" onClick={handleLandingPage} className={`${currentStep >= 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full border border-primary text-primary py-3 font-bold rounded-2xl hover:bg-primary hover:text-white`}>Tive um problema</button>
               }
 
               {currentStep > 3 &&
-                <button type="button" onClick={handleLandingPage} className={`${currentStep > 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full bg-primary text-white py-3 rounded-2xl hover:bg-violet-900`}>Ir para o início</button>
+                <button type="button" onClick={handlePayment} className={`${currentStep >= 1 ? "w-full" : "md:w-1/2 sm:w-full"} w-full bg-primary text-white py-3 rounded-2xl font-bold hover:bg-violet-900`}>Ir para o início</button>
               }
             </div>
         </div>
